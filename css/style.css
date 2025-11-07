@@ -42,11 +42,12 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
-  --theme-color1: #C2A74E;
-  --theme-color2: #011425;
-  --theme-color3: #666666;
-  --theme-color4: #183425;
-  --theme-color5: #f9f6f1;
+  /* Emerald / White / Black theme */
+  --theme-color1: #50C878; /* emerald green */
+  --theme-color2: #000000; /* primary dark (black) */
+  --theme-color3: #666666; /* neutral gray */
+  --theme-color4: #0f3b2f; /* deep emerald accent */
+  --theme-color5: #ffffff; /* white */
   --bg-theme-color1: var(--theme-color1);
   --bg-theme-color2: var(--theme-color2);
   --bg-theme-color3: var(--theme-color3);
@@ -56,18 +57,18 @@ License: copyright commercial
   --theme-color-light: #FFFFFF;
   --theme-color-dark: #000000;
   --theme-color-lighter: #F8F8F8;
-  --review-color: #FFAA18;
-  --theme-color1-dark: #B69D49;
-  --theme-color1-rgb: 194, 167, 78;
-  --theme-color2-rgb: 1, 20, 37;
+  --review-color: #FFD166; /* a warm accent if needed */
+  --theme-color1-dark: #3fa864;
+  --theme-color1-rgb: 80, 200, 120;
+  --theme-color2-rgb: 0, 0, 0;
   --theme-color3-rgb: 102, 102, 102;
-  --theme-color4-rgb: 24, 52, 37;
-  --theme-color5-rgb: 249, 246, 241;
-  --headings-color-rgb: 28, 26, 29;
+  --theme-color4-rgb: 15, 59, 47;
+  --theme-color5-rgb: 255, 255, 255;
+  --headings-color-rgb: 12, 12, 12;
   --theme-color-dark-rgb: 0, 0, 0;
   --theme-color-light-rgb: 255, 255, 255;
-  --text-color: #707070;
-  --headings-color: #1C1A1D;
+  --text-color: #222222; /* darker body text for readability */
+  --headings-color: #0C0C0C;
   --link-color: var(--theme-color-dark);
   --link-hover-color: var(--theme-color-dark);
   --text-font: "Plus Jakarta Sans", sans-serif;
@@ -101,7 +102,7 @@ License: copyright commercial
   --sec-title-font-family: var(--title-font);
   --sec-title-font-weight: 600;
   --sec-title-title-line-height: 1.172em;
-  --theme-light-background: #f8f6f1;
+  --theme-light-background: #ffffff;
   --theme-light-background-text-color: var(--headings-color);
   --theme-black: #000000;
   --container-width: 1320px;
