@@ -18779,3 +18779,13 @@ Sidebar
 .map {
   height: 450px;
 }
+
+/* Navbar logo - consistent sizing across pages */
+.navbar-logo-img{
+  max-height:80px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
+@media (max-width:991px){ .navbar-logo-img{ max-height:64px; } }
+@media (max-width:480px){ .navbar-logo-img{ max-height:48px; } }
