@@ -1038,3 +1038,27 @@ var THEMEMASCOT = {};
 	});	
 
 })(window.jQuery);
+
+/* Try to swap in a high-DPI logo if available: look for `Herbarium (1)@2x.png` in the same folder.
+	 This is a graceful enhancement — if the file doesn't exist nothing changes. */
+(function(){
+	try {
+		if (window.devicePixelRatio && window.devicePixelRatio > 1) {
+			var hiResPath = 'images/icons/Herbarium (1)@2x.png';
+			var tester = new Image();
+			tester.onload = function() {
+				// Only replace if load succeeded
+				var imgs = document.querySelectorAll('img.navbar-logo-img');
+				imgs.forEach(function(img){
+					// Preserve current src as data-src if needed later
+					if(!img.dataset.srcRetina) img.dataset.srcRetina = img.src;
+					img.src = hiResPath;
+				});
+			};
+			tester.onerror = function(){};
+			tester.src = hiResPath;
+		}
+	} catch(e) {
+		/* ignore */
+	}
+})();

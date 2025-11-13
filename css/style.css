@@ -18780,12 +18780,25 @@ Sidebar
   height: 450px;
 }
 
-/* Navbar logo - consistent sizing across pages */
+/* Navbar logo - consistent sizing across pages
+   Improved rendering for lower-quality PNGs and support for high-DPI replacements
+   Notes:
+   - For best results provide a higher-resolution file named with @2x before the extension,
+     e.g. `Herbarium (1)@2x.png`. The JS below will auto-swap on retina displays if that file exists.
+   - Prefer providing an SVG for perfectly crisp logos at any resolution.
+*/
 .navbar-logo-img{
   max-height:80px;
   width:auto;
   display:block;
   object-fit:contain;
+  /* Encourage high-quality scaling where supported */
+  image-rendering: auto;
+  -webkit-optimize-contrast: 1; /* non-standard hint for some WebKit browsers */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  /* slight contrast/saturation boost can make low-quality PNGs look better */
+  filter: contrast(1.02) saturate(1.04);
 }
 @media (max-width:991px){ .navbar-logo-img{ max-height:64px; } }
 @media (max-width:480px){ .navbar-logo-img{ max-height:48px; } }
